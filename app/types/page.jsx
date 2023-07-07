@@ -3,8 +3,9 @@ import { getTypesPokemon } from "@/lib/getTypesPokemon";
 
 const TypePage = async () => {
   const fetchTypeData = getTypesPokemon();
-  const types = await fetchTypeData;
-  const typeList = types.results.filter((type) => type.name !== "unknown");
+  const data = await fetchTypeData;
+  const typeList = data.results.slice(0, -2);
+
   return (
     <main className="container mx-auto px-4">
       <h1>Tipos pokemon</h1>
