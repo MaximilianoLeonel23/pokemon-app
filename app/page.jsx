@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export default function Home() {
-  const sections = ["type", "pokedex", "abilities"];
+  const sections = ["types", "pokedex", "abilities", "regions"];
 
   return (
     <main className="container mx-auto px-4">
