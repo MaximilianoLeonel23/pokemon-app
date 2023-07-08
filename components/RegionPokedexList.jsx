@@ -1,4 +1,5 @@
 import { getRegionPokedex } from "@/lib/getGenerations";
+import RegionPokedexItem from "./RegionPokedexItem";
 
 const RegionPokedex = async ({ regionPokedexUrl }) => {
   const fetchData = getRegionPokedex(regionPokedexUrl);
@@ -6,13 +7,13 @@ const RegionPokedex = async ({ regionPokedexUrl }) => {
 
   return (
     <>
-      <h3>Pokedex Regional: </h3>
+      <h3 className="font-medium text-lg text-zinc-700">Pokedex Regional</h3>
       <section>
-        <ul>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 py-4">
           {regionPokedex.pokemon_entries.map((entry, i) => {
-            return <li key={i}>{entry.pokemon_species.name}</li>;
+            return <RegionPokedexItem key={i} pokemon={entry} />;
           })}
-        </ul>
+        </div>
       </section>
     </>
   );

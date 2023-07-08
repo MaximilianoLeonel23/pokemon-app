@@ -30,7 +30,16 @@ const AbilitiesPage = () => {
         `https://pokeapi.co/api/v2/ability?limit=40&offset=${offset}`
       );
       const data = await response.json();
-      setAbilities((prevResources) => [...prevResources, ...data.results]);
+
+      setAbilities((prevState) => {
+        const alreadyAbilities = prevState.map((ability) => ability.name);
+        const newAbilities = data.results.filter(
+          (ability) => !alreadyAbilities.includes(ability.name)
+        );
+        const allAbilities = [...prevState, ...newAbilities];
+        allAbilities.sort((a, b) => a.name.localeCompare(b.name));
+        return allAbilities;
+      });
     };
 
     fetchData();
@@ -45,18 +54,21 @@ const AbilitiesPage = () => {
   );
 
   return (
-    <main className="container mx-auto px-4">
-      <h1>Abilities</h1>
-      <input
-        type="text"
-        placeholder="search"
-        value={searchTerm}
-        onChange={handleSearch}
-      />
-      <div className="grid gap-4">
-        {filteredAbilities.map((ability, i) => (
-          <AbilityCard key={i} url={ability.url} />
-        ))}
+    <main className="container">
+      <div className="flex flex-col gap-4">
+        <h1 className="text-3xl text-zinc-700 font-bold">Abilities</h1>
+        <input
+          type="text"
+          placeholder="Search by name or keep scrolling down"
+          value={searchTerm}
+          onChange={handleSearch}
+          className="border border-zinc-300 text-zinc-400 font-light rounded px-4 py-1"
+        />
+        <div className="grid gap-2 py-8">
+          {filteredAbilities.map((ability, i) => (
+            <AbilityCard key={i} url={ability.url} />
+          ))}
+        </div>
       </div>
     </main>
   );

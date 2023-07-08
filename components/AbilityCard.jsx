@@ -1,3 +1,4 @@
+import { capitalize } from "@/helpers/capitalize";
 import { getAbility } from "@/lib/getAbilities";
 import { useState, useEffect } from "react";
 
@@ -17,15 +18,17 @@ const AbilityCard = ({ url }) => {
     fetchData();
   }, [url]);
   return (
-    <article className="border border-gray-800 p-4">
-      <h4>{singleAbility?.name}</h4>
-      <p>
-        {
-          singleAbility?.effect_entries.filter(
-            (entrie) => entrie.language.name === "en"
-          )[0]?.effect
-        }
-      </p>
+    <article className="border border-zinc-200 bg-zinc-100 px-4 py-2 rounded">
+      <div className="leading-relaxed text-zinc-600">
+        <h4 className="font-medium">{capitalize(singleAbility?.name)}</h4>
+        <p className="font-light text-sm">
+          {
+            singleAbility?.effect_entries.filter(
+              (entrie) => entrie.language.name === "en"
+            )[0]?.effect
+          }
+        </p>
+      </div>
     </article>
   );
 };
