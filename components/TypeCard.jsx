@@ -1,46 +1,95 @@
+import { capitalize } from "@/helpers/capitalize";
 import { getTypesProps } from "@/lib/getTypesPokemon";
+import TypeTag from "./TypeTag";
+
 const TypeCard = async ({ type }) => {
   const fetchPropsData = getTypesProps(type.url);
   const props = await fetchPropsData;
+
+  const none = {
+    name: "none",
+  };
   return (
-    <div className="flex gap-4 border border-gray-800 p-4">
-      <p>{type.name}</p>
-      <div>
-        <h4>Weak to</h4>
-        {props.damage_relations.double_damage_from.map((tag) => {
-          return <p>{tag.name}</p>;
-        })}
-      </div>
-      <div>
-        <h4>Strong to</h4>
-        {props.damage_relations.double_damage_to.map((tag) => {
-          return <p>{tag.name}</p>;
-        })}
-      </div>
-      <div>
-        <h4>Half damage from</h4>
-        {props.damage_relations.half_damage_from.map((tag) => {
-          return <p>{tag.name}</p>;
-        })}
-      </div>
-      <div>
-        <h4>Half damage to</h4>
-        {props.damage_relations.half_damage_to.map((tag) => {
-          return <p>{tag.name}</p>;
-        })}
-      </div>
-      <div>
-        <h4>No damage from</h4>
-        {props.damage_relations.no_damage_from.map((tag) => {
-          return <p>{tag.name}</p>;
-        })}
-      </div>
-      <div>
-        <h4>No damage to</h4>
-        {props.damage_relations.no_damage_to.map((tag) => {
-          return <p>{tag.name}</p>;
-        })}
-      </div>
+    <div className="border border-zinc-200 bg-zinc-100 px-4 rounded py-4 text-zinc-700">
+      <table className="w-full">
+        <tbody>
+          <caption className="text-center font-semibold border-b pb-2 border-zinc-200">
+            {capitalize(type.name)}
+          </caption>
+          <tr>
+            <td>Weak to</td>
+            <td>
+              {props.damage_relations.double_damage_from.length > 0 ? (
+                props.damage_relations.double_damage_from.map((type) => {
+                  return <TypeTag type={type} />;
+                })
+              ) : (
+                <TypeTag type={none} />
+              )}
+            </td>
+          </tr>
+          <tr>
+            <td>Strong to</td>
+            <td>
+              {props.damage_relations.double_damage_to.length > 0 ? (
+                props.damage_relations.double_damage_to.map((type) => {
+                  return <TypeTag type={type} />;
+                })
+              ) : (
+                <TypeTag type={none} />
+              )}
+            </td>
+          </tr>
+          <tr>
+            <td>Half damage from</td>
+            <td>
+              {props.damage_relations.half_damage_from.length > 0 ? (
+                props.damage_relations.half_damage_from.map((type) => {
+                  return <TypeTag type={type} />;
+                })
+              ) : (
+                <TypeTag type={none} />
+              )}
+            </td>
+          </tr>
+          <tr>
+            <td>Half damage to</td>
+            <td>
+              {props.damage_relations.half_damage_to.length > 0 ? (
+                props.damage_relations.half_damage_to.map((type) => {
+                  return <TypeTag type={type} />;
+                })
+              ) : (
+                <TypeTag type={none} />
+              )}
+            </td>
+          </tr>
+          <tr>
+            <td>No damage from</td>
+            <td>
+              {props.damage_relations.no_damage_from.length > 0 ? (
+                props.damage_relations.no_damage_from.map((type) => {
+                  return <TypeTag type={type} />;
+                })
+              ) : (
+                <TypeTag type={none} />
+              )}
+            </td>
+          </tr>
+          <tr>
+            <td>No damage to</td>
+            <td>
+              {props.damage_relations.no_damage_to.length > 0 ? (
+                props.damage_relations.no_damage_to.map((type) => {
+                  return <TypeTag type={type} />;
+                })
+              ) : (
+                <TypeTag type={none} />
+              )}
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 };

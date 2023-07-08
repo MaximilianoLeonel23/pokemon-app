@@ -43,7 +43,7 @@ const PokemonCard = ({ url }) => {
               </span>
               <div className="flex flex-wrap gap-2 justify-center">
                 {singlePokemon.types.map((type, i) => (
-                  <TypeTag key={i} type={type} />
+                  <TypeTag key={i} type={type.type} />
                 ))}
               </div>
             </>

@@ -6,3 +6,11 @@
 body {
   font-family: "Noto Sans", sans-serif;
 }
+
+td {
+  @apply flex flex-wrap gap-2 text-sm;
+}
+
+tbody {
+  @apply flex flex-col gap-2;
+}
