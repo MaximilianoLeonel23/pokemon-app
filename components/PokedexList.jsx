@@ -12,7 +12,7 @@ const PokedexList = () => {
         window.innerHeight + document.documentElement.scrollTop ===
         document.documentElement.offsetHeight
       ) {
-        setOffset((prevOffset) => prevOffset + 60);
+        setOffset((prevOffset) => prevOffset + 100);
       }
     };
 
@@ -26,7 +26,7 @@ const PokedexList = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
-        `https://pokeapi.co/api/v2/pokemon?limit=60&offset=${offset}`
+        `https://pokeapi.co/api/v2/pokemon?limit=100&offset=${offset}`
       );
       const data = await response.json();
       setResources((prevResources) => [...prevResources, ...data.results]);
@@ -36,7 +36,7 @@ const PokedexList = () => {
   }, [offset]);
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 py-4">
       {resources.map((resource, index) => (
         <PokemonCard key={index} url={resource.url} />
       ))}

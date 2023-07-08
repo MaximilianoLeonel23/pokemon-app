@@ -1,20 +1,18 @@
-import Link from "next/link";
+import SectionCard from "@/components/SectionCard";
 
 export default function Home() {
-  const sections = ["types", "pokedex", "abilities", "regions"];
+  const sections = ["pokedex", "types", "abilities", "regions"];
 
   return (
-    <main className="container mx-auto px-4">
-      <h1>Página de inicio</h1>
-      <ul>
+    <main className="container">
+      <h1 className="text-3xl text-zinc-700 font-bold">
+        What are you looking for?
+      </h1>
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 py-8">
         {sections.map((section, i) => {
-          return (
-            <li key={i}>
-              <Link href={`/${section}`}>{section}</Link>
-            </li>
-          );
+          return <SectionCard key={i} section={section} />;
         })}
-      </ul>
+      </div>
     </main>
   );
 }
