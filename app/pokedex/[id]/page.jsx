@@ -1,4 +1,5 @@
 import { capitalize } from "@/helpers/capitalize";
+import { getBgColor } from "@/helpers/getColorClass";
 import { getSinglePokemon } from "@/lib/getSinglePokemon";
 
 const SinglePokemon = async ({ params }) => {
@@ -6,11 +7,19 @@ const SinglePokemon = async ({ params }) => {
   const pokemon = await fetchData;
 
   return (
-    <main className="container py-4">
-      <div>
+    <main>
+      <section className={`${getBgColor(pokemon?.types[0].type.name)} rounded`}>
+        <div className="p-4">
+          <img
+            src={pokemon.sprites.other["official-artwork"].front_default}
+            alt="pokemon image"
+          />
+        </div>
+      </section>
+      <section className="container">
         <p>{params.id}</p>
         <h1>{capitalize(pokemon?.name)}</h1>
-      </div>
+      </section>
     </main>
   );
 };
