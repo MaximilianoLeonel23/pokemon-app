@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "next/link";
+
+import MenuBtn from "./MenuBtn";
 const Navbar = () => {
   return (
     <>
@@ -9,13 +11,12 @@ const Navbar = () => {
             <li>
               <Link href="/pokedex">Pokedex</Link>
             </li>
-            <li>
-              <Link href="/news">Noticias</Link>
-            </li>
           </ul>
         </nav>
       </div>
-      <div className="flex sm:hidden">Mobile</div>
+      <div className="flex sm:hidden">
+        <MenuBtn />
+      </div>
     </>
   );
 };

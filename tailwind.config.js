@@ -36,7 +36,7 @@ module.exports = {
           dark: "#736D83",
           fighting: "#DE7693",
           poison: "#C59BDD",
-          other: "#FDFBF5",
+          other: "#fafafa",
         },
       },
     },

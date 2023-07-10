@@ -54,9 +54,9 @@ const AbilitiesPage = () => {
   );
 
   return (
-    <main className="container">
+    <main className="container py-4">
       <div className="flex flex-col gap-4">
-        <h1 className="text-3xl text-zinc-700 font-bold">Abilities</h1>
+        <h1 className="text-3xl text-zinc-700 font-bold mb-4">Abilities</h1>
         <input
           type="text"
           placeholder="Search by name or keep scrolling down"
