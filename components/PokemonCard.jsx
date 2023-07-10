@@ -3,6 +3,7 @@ import { capitalize } from "@/helpers/capitalize";
 import { getPokemonByUrl } from "@/lib/getPokemonByUrl";
 import Link from "next/link";
 import TypeTag from "./TypeTag";
+import { getBgColor } from "@/helpers/getColorClass";
 
 const PokemonCard = ({ url }) => {
   const [singlePokemon, setSinglePokemon] = useState(null);
@@ -22,7 +23,9 @@ const PokemonCard = ({ url }) => {
 
   return (
     <Link href={`/pokedex/${singlePokemon?.id}`}>
-      <article className="bg-zinc-200 p-4 rounded-lg text-center">
+      <article
+        className={`border border-zinc-200 bg-zinc-100 p-4 rounded-lg text-center`}
+      >
         <div className="flex flex-col gap-2 items-center justify-center">
           {singlePokemon ? (
             <>

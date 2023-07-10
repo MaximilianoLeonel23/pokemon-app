@@ -14,3 +14,253 @@ td {
 tbody {
   @apply flex flex-col gap-2;
 }
+
+/* Colors */
+/* Clases para el color "fire" */
+
+/* Clases para el color "fire" */
+.bg-fire {
+  @apply bg-type-fire;
+}
+
+.border-fire {
+  @apply border-type-fire;
+}
+
+.text-fire {
+  @apply text-type-fire;
+}
+
+/* Clases para el color "water" */
+.bg-water {
+  @apply bg-type-water;
+}
+
+.border-water {
+  @apply border-type-water;
+}
+
+.text-water {
+  @apply text-type-water;
+}
+
+/* Clases para el color "grass" */
+.bg-grass {
+  @apply bg-type-grass;
+}
+
+.border-grass {
+  @apply border-type-grass;
+}
+
+.text-grass {
+  @apply text-type-grass;
+}
+
+/* Clases para el color "bug" */
+.bg-bug {
+  @apply bg-type-bug;
+}
+
+.border-bug {
+  @apply border-type-bug;
+}
+
+.text-bug {
+  @apply text-type-bug;
+}
+
+/* Clases para el color "fairy" */
+.bg-fairy {
+  @apply bg-type-fairy;
+}
+
+.border-fairy {
+  @apply border-type-fairy;
+}
+
+.text-fairy {
+  @apply text-type-fairy;
+}
+
+/* Clases para el color "normal" */
+.bg-normal {
+  @apply bg-type-normal;
+}
+
+.border-normal {
+  @apply border-type-normal;
+}
+
+.text-normal {
+  @apply text-type-normal;
+}
+
+/* Clases para el color "dragon" */
+.bg-dragon {
+  @apply bg-type-dragon;
+}
+
+.border-dragon {
+  @apply border-type-dragon;
+}
+
+.text-dragon {
+  @apply text-type-dragon;
+}
+
+/* Clases para el color "psychic" */
+.bg-psychic {
+  @apply bg-type-psychic;
+}
+
+.border-psychic {
+  @apply border-type-psychic;
+}
+
+.text-psychic {
+  @apply text-type-psychic;
+}
+
+/* Clases para el color "ghost" */
+.bg-ghost {
+  @apply bg-type-ghost;
+}
+
+.border-ghost {
+  @apply border-type-ghost;
+}
+
+.text-ghost {
+  @apply text-type-ghost;
+}
+
+/* Clases para el color "ground" */
+.bg-ground {
+  @apply bg-type-ground;
+}
+
+.border-ground {
+  @apply border-type-ground;
+}
+
+.text-ground {
+  @apply text-type-ground;
+}
+
+/* Clases para el color "steel" */
+.bg-steel {
+  @apply bg-type-steel;
+}
+
+.border-steel {
+  @apply border-type-steel;
+}
+
+.text-steel {
+  @apply text-type-steel;
+}
+
+/* Clases para el color "flying" */
+.bg-flying {
+  @apply bg-type-flying;
+}
+
+.border-flying {
+  @apply border-type-flying;
+}
+
+.text-flying {
+  @apply text-type-flying;
+}
+
+/* Clases para el color "ice" */
+.bg-ice {
+  @apply bg-type-ice;
+}
+
+.border-ice {
+  @apply border-type-ice;
+}
+
+.text-ice {
+  @apply text-type-ice;
+}
+
+/* Clases para el color "electric" */
+.bg-electric {
+  @apply bg-type-electric;
+}
+
+.border-electric {
+  @apply border-type-electric;
+}
+
+.text-electric {
+  @apply text-type-electric;
+}
+
+/* Clases para el color "rock" */
+.bg-rock {
+  @apply bg-type-rock;
+}
+
+.border-rock {
+  @apply border-type-rock;
+}
+
+.text-rock {
+  @apply text-type-rock;
+}
+
+/* Clases para el color "dark" */
+.bg-dark {
+  @apply bg-type-dark;
+}
+
+.border-dark {
+  @apply border-type-dark;
+}
+
+.text-dark {
+  @apply text-type-dark;
+}
+
+/* Clases para el color "fighting" */
+.bg-fighting {
+  @apply bg-type-fighting;
+}
+
+.border-fighting {
+  @apply border-type-fighting;
+}
+
+.text-fighting {
+  @apply text-type-fighting;
+}
+
+/* Clases para el color "poison" */
+.bg-poison {
+  @apply bg-type-poison;
+}
+
+.border-poison {
+  @apply border-type-poison;
+}
+
+.text-poison {
+  @apply text-type-poison;
+}
+
+/* Clases para el color "other" */
+.bg-other {
+  @apply bg-type-other;
+}
+
+.border-other {
+  @apply border-type-other;
+}
+
+.text-other {
+  @apply text-type-other;
+}
