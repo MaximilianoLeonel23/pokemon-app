@@ -4,6 +4,7 @@ import { getPokemonByUrl } from "@/lib/getPokemonByUrl";
 import Link from "next/link";
 import TypeTag from "./TypeTag";
 import { getBgColor } from "@/helpers/getColorClass";
+import Loading from "./Loading";
 
 const PokemonCard = ({ url }) => {
   const [singlePokemon, setSinglePokemon] = useState(null);
@@ -38,10 +39,10 @@ const PokemonCard = ({ url }) => {
                   alt={singlePokemon.name}
                 />
               </div>
-              <h4 className="font-semibold text-zinc-800 ">
+              <h4 className="font-semibold text-zinc-700 ">
                 {capitalize(singlePokemon.name)}
               </h4>
-              <span className="font-normal text-sm text-zinc-800 tracking-wide">
+              <span className="font-medium text-sm text-zinc-700 tracking-wide">
                 {String(singlePokemon.id).padStart(4, "0")}
               </span>
               <div className="flex flex-wrap gap-2 justify-center">
@@ -51,7 +52,7 @@ const PokemonCard = ({ url }) => {
               </div>
             </>
           ) : (
-            <p>Loading...</p>
+            <Loading />
           )}
         </div>
       </article>

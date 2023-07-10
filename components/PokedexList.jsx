@@ -29,7 +29,10 @@ const PokedexList = () => {
         `https://pokeapi.co/api/v2/pokemon?limit=100&offset=${offset}`
       );
       const data = await response.json();
-      setResources((prevResources) => [...prevResources, ...data.results]);
+      setResources((prevResources) => [
+        ...prevResources,
+        ...(data.results || []),
+      ]);
     };
 
     fetchData();
