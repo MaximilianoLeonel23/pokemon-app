@@ -13,7 +13,9 @@ const PokedexMoveSection = ({ pokemon }) => {
   );
 
   return (
-    <section className="hidden container text-sm text-zinc-700">
+    <section className="container text-sm text-zinc-700 pb-8">
+      <h2 className="font-bold text-base pb-4">Moves</h2>
+
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
           <h4 className="font-medium">Egg moves</h4>

@@ -1,6 +1,7 @@
 import { capitalize } from "@/helpers/capitalize";
 import TypeTag from "../TypeTag";
 import { getPokemonSpecies } from "@/lib/getSinglePokemon";
+
 const PokedexAboutSection = async ({ pokemon }) => {
   const fetchData = await getPokemonSpecies(pokemon.species.url);
   const information = await fetchData;
@@ -11,16 +12,16 @@ const PokedexAboutSection = async ({ pokemon }) => {
     (ability) => ability.is_hidden
   );
   return (
-    <section className="container text-sm text-zinc-700">
+    <section className="container text-sm text-zinc-700 pb-8 border-b-[1px] border-zinc-200">
+      <h2 className="font-bold text-base pb-4">About</h2>
       <div className="flex flex-col gap-4">
         <div>
-          <h2>Description</h2>
+          <h2 className="font-medium">Description</h2>
           <p>
-            {
-              information.flavor_text_entries.filter(
-                (entrie) => entrie.language.name === "en"
-              )[0].flavor_text
-            }
+            {information.flavor_text_entries
+              .filter((entrie) => entrie.language.name === "en")[0]
+              .flavor_text.replace(/\n/g, " ")
+              .replace(/\f/g, " ")}
           </p>
         </div>
         <div className="flex items-center gap-2">
@@ -30,13 +31,13 @@ const PokedexAboutSection = async ({ pokemon }) => {
           ))}
         </div>
         <div>
-          <h2 className="font-medium">Abilidad normal </h2>
+          <h2 className="font-medium">Normal Ability </h2>
           {notHiddenAbility?.map((ability) => {
             return <p>{capitalize(ability.ability.name)}</p>;
           })}
         </div>
         <div>
-          <h2 className="font-medium">Abilidad oculta</h2>
+          <h2 className="font-medium">Hidden Ability</h2>
           {isHiddenAbility?.map((ability) => {
             return <p>{capitalize(ability.ability.name)}</p>;
           })}

@@ -3,7 +3,6 @@ import { capitalize } from "@/helpers/capitalize";
 import { getPokemonByUrl } from "@/lib/getPokemonByUrl";
 import Link from "next/link";
 import TypeTag from "./TypeTag";
-import { getBgColor } from "@/helpers/getColorClass";
 import Loading from "./Loading";
 
 const PokemonCard = ({ url }) => {
