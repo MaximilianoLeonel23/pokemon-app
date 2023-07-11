@@ -59,10 +59,10 @@ const AbilitiesPage = () => {
         <h1 className="text-3xl text-zinc-700 font-bold mb-4">Abilities</h1>
         <input
           type="text"
-          placeholder="Search by name or keep scrolling down"
+          placeholder="Search by name or keep scrolling down for more entries"
           value={searchTerm}
           onChange={handleSearch}
-          className="border border-zinc-300 text-zinc-400 font-light rounded px-4 py-1"
+          className="border border-zinc-300 text-zinc-400 text-sm font-light rounded px-4 py-1"
         />
         <div className="grid gap-2 py-8">
           {filteredAbilities.map((ability, i) => (

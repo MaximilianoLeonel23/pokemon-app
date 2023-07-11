@@ -5,7 +5,7 @@ import PokedexEvolutionSection from "@/components/PokedexById/PokedexEvolutionSe
 
 const PokedexSections = ({ pokemon }) => {
   return (
-    <section className="container bg-zinc-100 rounded-t-3xl py-8">
+    <section className="container border border-zinc-200 bg-zinc-100 sm:bg-transparent  rounded-t-3xl py-8">
       <div className="flex flex-col gap-4">
         <PokedexAboutSection pokemon={pokemon} />
         <PokedexStatsSection pokemon={pokemon} />

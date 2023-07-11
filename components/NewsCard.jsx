@@ -6,7 +6,7 @@ import defaultNewImage from "../assets/images/defaultNewImage.png";
 
 const NewsCard = ({ article }) => {
   return (
-    <Link href={article?.url}>
+    <Link href={article?.url} target="_blank">
       <article className="grid grid-cols-2 gap-8 p-4 border-b border-zinc-200">
         <div className="flex flex-col justify-between gap-2">
           <h4 className="text-sm font-medium text-zinc-700">

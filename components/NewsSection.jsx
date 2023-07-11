@@ -36,7 +36,7 @@ const NewsSection = () => {
   return (
     <section className="container py-8 bg-zinc-100">
       <h2 className="text-2xl text-zinc-700 font-bold p-4">What is new?</h2>
-      <div className="grid sm:grid-cols-2">
+      <div className="grid sm:grid-cols-2 gap-4">
         {allNews?.map((article) => {
           return <NewsCard article={article} />;
         })}

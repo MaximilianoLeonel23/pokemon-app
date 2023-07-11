@@ -10,7 +10,7 @@ const PokedexStatsSection = ({ pokemon }) => {
             <div key={i}>
               <p className="font-medium">
                 {capitalize(stat.stat.name)}
-                <span className="font-normal"> {stat.base_stat}</span>
+                <span className="font-normal">: {stat.base_stat}</span>
               </p>
             </div>
           );
