@@ -1,7 +1,7 @@
 import { capitalize } from "@/helpers/capitalize";
 import { getTypesProps } from "@/lib/getTypesPokemon";
 import TypeTag from "./TypeTag";
-import { getBorderClass, getTextClass } from "@/helpers/getColorClass";
+import { getBgColor } from "@/helpers/getColorClass";
 
 const TypeCard = async ({ type }) => {
   const fetchPropsData = getTypesProps(type.url);
@@ -15,9 +15,9 @@ const TypeCard = async ({ type }) => {
       <table className="w-full">
         <tbody>
           <caption
-            className={`text-cente font-semibold tracking-wide border rounded py-2 ${getBorderClass(
+            className={`text-center font-semibold tracking-wide rounded py-2 ${getBgColor(
               type.name
-            )} ${getTextClass(type.name)} `}
+            )} `}
           >
             {capitalize(type.name)}
           </caption>
