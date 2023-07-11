@@ -9,7 +9,7 @@ const NewsCard = ({ article }) => {
     <Link href={article?.url} target="_blank">
       <article className="grid grid-cols-2 gap-8 p-4 border-b border-zinc-200">
         <div className="flex flex-col justify-between gap-2">
-          <h4 className="text-sm font-medium text-zinc-700">
+          <h4 className="text-xs sm:text-sm font-medium text-zinc-700">
             {formattedTitles(article?.title)}
           </h4>
           <p className="text-xs text-zinc-700">

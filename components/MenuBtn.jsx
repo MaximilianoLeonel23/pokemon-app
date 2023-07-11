@@ -23,7 +23,7 @@ const MenuBtn = () => {
       <nav
         className={`${
           openMenu ? "translate-x-0" : "-translate-x-[125%]"
-        } absolute right-4 left-4 top-16 p-4 bg-zinc-100 border border-zinc-200 rounded transition duration-300`}
+        } absolute right-4 left-4 top-16 py-4 px-8 bg-zinc-100 border border-zinc-200 rounded transition duration-300`}
       >
         <ul className="flex justify-around gap-2 text-zinc-700 text-sm font-medium">
           <li>
