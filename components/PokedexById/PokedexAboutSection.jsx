@@ -21,7 +21,8 @@ const PokedexAboutSection = async ({ pokemon }) => {
             {information.flavor_text_entries
               .filter((entrie) => entrie.language.name === "en")[0]
               .flavor_text.replace(/\n/g, " ")
-              .replace(/\f/g, " ")}
+              .replace(/\f/g, " ")
+              .replace(/POKéMON/g, "Pokemon")}
           </p>
         </div>
         <div className="flex items-center gap-2">

@@ -1,7 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
 import AbilityCard from "@/components/AbilityCard";
-
+import arrowLeft from "@/assets/icons/arrowLeft.svg";
+import Link from "next/link";
+import Image from "next/image";
 const AbilitiesPage = () => {
   const [abilities, setAbilities] = useState([]);
   const [offset, setOffset] = useState(0);
@@ -56,7 +58,12 @@ const AbilitiesPage = () => {
   return (
     <main className="container py-4">
       <div className="flex flex-col gap-4">
-        <h1 className="text-3xl text-zinc-700 font-bold mb-4">Abilities</h1>
+        <div className="flex items-start gap-4">
+          <Link href="/" className="bg-zinc-200 rounded-full p-2">
+            <Image src={arrowLeft} alt="arrow left" />
+          </Link>
+          <h1 className="text-3xl text-zinc-700 font-bold mb-4">Abilities</h1>
+        </div>
         <input
           type="text"
           placeholder="Search by name or keep scrolling down for more entries"

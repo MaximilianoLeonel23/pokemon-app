@@ -24,7 +24,7 @@ const PokemonCard = ({ url }) => {
   return (
     <Link href={`/pokedex/${singlePokemon?.id}`}>
       <article
-        className={`border border-zinc-200 bg-zinc-100 p-4 rounded-lg text-center hover:scale-110 transition`}
+        className={`border border-zinc-200 bg-zinc-100 p-4 rounded-lg text-center sm:hover:scale-110 transition`}
       >
         <div className="flex flex-col gap-2 items-center justify-center">
           {singlePokemon ? (
