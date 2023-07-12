@@ -1,7 +1,6 @@
 ## Table of contents
 
-. [Overview](#overview)
-
+- [Overview](#overview)
 - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -11,7 +10,7 @@
 
 ### Overview
 
-![](./assets/images/preview.png)
+![](./assets/images/pokedexPreview.png)
 
 ### Responsive Design
 
